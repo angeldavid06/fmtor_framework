@@ -1,4 +1,6 @@
 const btn_menu_toggle = document.getElementById('btn-menu-toggle')
+const btn_subir = document.getElementById('btn-subir')
+
 const menu = document.getElementById('menu')
 const contenido = document.getElementById('contenido')
 

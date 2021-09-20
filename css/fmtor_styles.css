@@ -130,6 +130,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--background-aux);
+    border-right: 2px solid var(--border-color);
     transition: all .3s;
 }
 
