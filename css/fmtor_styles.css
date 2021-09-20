@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --border-radius: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-body: #2F3134;
+        --background-aux: #252729;
+        --background-button:#004A77;
+        --color-button: #C2E7FF;
+        --color-text: #FFFFFF;
+        --border-color: #6D747F;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-body: #FFFFFF;
+        --background-aux: #F1F5FB;
+        --background-button:#C2E7FF;
+        --color-button: #001D35;
+        --color-text: #383838;
+        --border-color: #EFEFEF;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: var(--background-button);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-text);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--background-aux); 
+    border-radius: var(--border-radius);
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+    background: var(--background-aux);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--background-button);
+    border-radius: var(--border-radius);
+}
+
+.btn {
+    font-family: 'Rubik', sans-serif;
+    padding: 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--background-button);
+    color: var(--color-button);
+    cursor: pointer;
+}
+
+.btn-icon {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.btn-icon i {
+    padding: 0px 20px 0px 0px;
+    color: var(--color-button);
+}
+
+.btn-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-body);
+}
+
+.contenedor {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.menu {
+    max-width: 25%;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background-aux);
+    transition: all .3s;
+}
+
+.contenedor .menu.hidde_menu {
+    width: 80px;
+    max-width: 80px;
+    overflow-x: hidden;
+}
+
+.menu .informacion {
+    padding: 30px;
+    width: 100%;
+}
+
+.contenedor .menu.hidde_menu .informacion {
+    width: 300px;
+    padding: 5px;
+}
+
+.menu .informacion .foto {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-text);
+    margin: 0px auto 30px auto;
+    border-radius: 50%;
+}
+
+.contenedor .menu.hidde_menu .informacion .foto {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu .informacion h3 {
+    text-align: center;
+}
+
+.contenedor .menu.hidde_menu .informacion h3 {
+    display: none;
+}
+
+.menu .informacion p {
+    padding: 15px 0px 0px 0px;
+    text-align: center;
+}
+
+.contenedor .menu.hidde_menu .informacion p {
+    display: none;
+}
+
+.menu .categoria_menu {
+    width: 100%;
+}
+
+.menu .titulo_categoria_menu {
+    width: 100%;
+    padding: 30px;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.contenedor .menu.hidde_menu .titulo_categoria_menu {
+    padding: 0;
+}
+
+.menu .titulo_categoria_menu p {
+    text-transform: uppercase;
+}
+
+.contenedor .menu.hidde_menu .titulo_categoria_menu p {
+    display: none;
+}
+
+.menu nav {
+    width: 100%;
+}
+
+.menu nav a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    transition: all .3s;
+}
+
+.contenedor .menu.hidde_menu a {
+    width: 80px;
+    padding: 5px;
+}
+
+.menu nav a i {
+    padding: 0px 20px 0px 0px;
+}
+
+.contenedor .menu.hidde_menu a i {
+    padding: 0px 25px 0px 20px;
+}
+
+.menu nav a.active {
+    width: 90%;
+    background-color: var(--background-button);
+    color: var(--color-button);
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
+.menu nav a.active i {
+    color: var(--color-button);
+}
+
+.contenedor .menu.hidde_menu a.active {
+    border-radius: 0;
+}
+
+.contenido {
+    max-width: 75%;
+    max-height: 100vh;
+    overflow: auto;
+    transition: all .3s;
+}
+
+.contenido.hidde_menu {
+    max-width: calc(100% - 80px);
+}
+
+.contenido header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.contenido header .logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.contenido header .logos .logo {
+    width: 200px;
+    height: 50px;
+}
+
+.contenido .informacion {
+    padding: 30px;
+}
+
+.contenido .informacion .tarjeta {
+    background-color: var(--background-aux);
+    padding: 30px;
+    margin: 30px 0px 0px 0px;
+    border: 2px solid var(--background-aux); 
+    border-radius: var(--border-radius);
+    transition: all .3s;
+}
+
+.contenido .informacion .tarjeta:hover {
+    border: 2px solid var(--border-color);
+}
+
+.contenido .informacion .tarjeta p {
+    padding: 30px 0px 0px 0px;
+    line-height: 1.5rem;
+}
+
+.contenido .informacion .tarjeta table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contenido .informacion .tarjeta table thead tr th,
+.contenido .informacion .tarjeta table tbody tr td {
+    padding: 10px;
+}
+
+.contenido .informacion .tarjeta table tbody tr:nth-child(even) {
+    background-color: var(--background-body);
+}
+
+.d-grid {
+    display: grid;
+}
+
+.g-12 {
+    grid-template-columns: repeat(12,1fr);
+}
+
+.g-11 {
+    grid-template-columns: repeat(11,1fr);
+}
+
+.g-10 {
+    grid-template-columns: repeat(10,1fr);
+}
+
+.g-9 {
+    grid-template-columns: repeat(9,1fr);
+}
+
+.g-8 {
+    grid-template-columns: repeat(8,1fr);
+}
+
+.g-7 {
+    grid-template-columns: repeat(7,1fr);
+}
+
+.g-6 {
+    grid-template-columns: repeat(6,1fr);
+}
+
+.g-5 {
+    grid-template-columns: repeat(5,1fr);
+}
+
+.g-4 {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.g-3 {
+    grid-template-columns: repeat(3,1fr);
+}
+
+.g-2 {
+    grid-template-columns: repeat(2,1fr);
+}
+
+.g-1 {
+    grid-template-columns: 1fr;
+}
