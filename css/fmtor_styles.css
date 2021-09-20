@@ -245,6 +245,7 @@ body {
 }
 
 .contenido {
+    width: 75%;
     max-width: 75%;
     max-height: 100vh;
     overflow: auto;
@@ -252,6 +253,7 @@ body {
 }
 
 .contenido.hidde_menu {
+    width: calc(100% - 80px);
     max-width: calc(100% - 80px);
 }
 
