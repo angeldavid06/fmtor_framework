@@ -64,6 +64,10 @@
     border-radius: var(--border-radius);
 }
 
+button {
+    display: block;
+}
+
 .btn {
     font-family: 'Rubik', sans-serif;
     padding: 15px;
@@ -112,9 +116,113 @@ a, p, label, input, textarea, select, button {
     font-size: 0.9rem;
 }
 
+label {
+    display: block;
+    margin-top: 15px;
+}
+
 a {
     color: var(--color-text);
     text-decoration: none;
+}
+
+input, textarea, select {
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    padding: 15px;
+    margin: 15px 0px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--background-body);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+.lbl-checkbox,
+.lbl-radio {
+    width: inherit;
+    cursor: pointer;
+    padding: 15px 15px 15px 45px;
+    border-radius: var(--border-radius);
+    background-color: var(--background-aux);
+    transition: all .3s;
+    position: relative;
+}
+
+.lbl-checkbox::before {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--color-text);
+    left: 15px;
+    top: 14px;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 3px;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.lbl-radio::before {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--color-text);
+    left: 15px;
+    top: 14px;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all .3s;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+    background-color: var(--background-button);
+    padding: 15px 15px 15px 15px;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+    opacity: 0;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
+}
+
+form button {
+    margin-top: 15px;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-lowercase {
+    text-transform: lowercase;
+}
+
+.txt-capitalize {
+    text-transform: capitalize;
+}
+
+.txt-uppercase {
+    text-transform: uppercase;
 }
 
 body {
@@ -312,6 +420,10 @@ body {
     border: 2px solid var(--border-color);
 }
 
+.contenido .informacion .tarjeta h3:not(:first-child) {
+    padding-top: 30px;
+}
+
 .contenido .informacion .tarjeta p {
     padding: 30px 0px 0px 0px;
     line-height: 1.5rem;
@@ -331,8 +443,14 @@ body {
     background-color: var(--background-body);
 }
 
+.contenido .informacion .caja_de_contenido {
+    width: 100%;
+}
+
 .d-grid {
     display: grid;
+    grid-gap: 30px;
+    width: 100%;
 }
 
 .g-12 {
