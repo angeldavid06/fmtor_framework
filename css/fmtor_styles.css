@@ -66,7 +66,7 @@
 
 .btn {
     font-family: 'Rubik', sans-serif;
-    padding: 20px;
+    padding: 15px;
     border: none;
     border-radius: var(--border-radius);
     background-color: var(--background-button);
@@ -81,7 +81,7 @@
 }
 
 .btn-icon i {
-    padding: 0px 20px 0px 0px;
+    padding: 0px 15px 0px 0px;
     color: var(--color-button);
 }
 
@@ -97,15 +97,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+}
+
+a, p, label, input, textarea, select, button {
+    font-size: 0.9rem;
 }
 
 a {
@@ -125,7 +129,8 @@ body {
 }
 
 .menu {
-    max-width: 25%;
+    width: 20%;
+    max-width: 20%;
     max-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -135,8 +140,8 @@ body {
 }
 
 .contenedor .menu.hidde_menu {
-    width: 80px;
-    max-width: 80px;
+    width: 79px;
+    max-width: 79px;
     overflow-x: hidden;
 }
 
@@ -161,7 +166,7 @@ body {
 .contenedor .menu.hidde_menu .informacion .foto {
     width: 40px;
     height: 40px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 15px 10px 15px;
 }
 
 .menu .informacion h3 {
@@ -217,8 +222,8 @@ body {
 }
 
 .contenedor .menu.hidde_menu a {
-    width: 80px;
-    padding: 5px 8px;
+    width: 300px;
+    padding: 20px 8px;
 }
 
 .menu nav a i {
@@ -240,13 +245,24 @@ body {
     color: var(--color-button);
 }
 
+.menu nav a:hover i {
+    color: var(--background-button);
+}
+
+.menu nav a:hover {
+    width: 90%;
+    background-color: var(--color-button);
+    color: var(--background-button);
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
 .contenedor .menu.hidde_menu a.active {
     border-radius: 0;
 }
 
 .contenido {
-    width: 75%;
-    max-width: 75%;
+    width: 80%;
+    max-width: 80%;
     max-height: 100vh;
     overflow: auto;
     transition: all .3s;
@@ -365,4 +381,27 @@ body {
 
 .g-1 {
     grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 1366px) {
+ 
+    .contenido {
+        width: 75%;
+        max-width: 75%;
+        max-height: 100vh;
+        overflow: auto;
+        transition: all .3s;
+    }
+
+    .menu {
+        width: 25%;
+        max-width: 25%;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: var(--background-aux);
+        border-right: 2px solid var(--border-color);
+        transition: all .3s;
+    }
+    
 }
