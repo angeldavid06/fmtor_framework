@@ -29,7 +29,7 @@ const quitar_mas_opciones = () => {
     }
 }
 
-const render_mas_opciones = () => {
+const render_mas_opciones = (texto) => {
     quitar_mas_opciones()
     const mas_opciones = document.createElement('div')
     const titulo = document.createElement('titulo')
@@ -45,19 +45,17 @@ const render_mas_opciones = () => {
 
     titulo.innerHTML = '<div class="titulo">'+
                                 '<i class="material-icons" data-quitar="opciones">close</i>'+
-                                '<h3>Opciones a realizar</h3>'+
+                                '<h3>'+texto+'</h3>'+
                             '</div>'
                             
     opciones.innerHTML = '<div class="opciones">'+
-                                '<button class="btn btn-icon btn-transparent" data-id="1">'+
-                                    '<i class="material-icons">delete</i>'+
-                                    ' Eliminar'+
+                                '<button class="btn btn-icon-self btn-transparent material-icons" data-id="1">'+
+                                    'delete'+
                                 '</button>'+
-                                '<button class="btn btn-icon btn-transparent" data-id="1">'+
-                                    '<i class="material-icons">edit</i>'+
-                                    'Editar'+
-                                    '</button>'+
-                                    '</div>'
+                                '<button class="btn btn-icon-self btn-transparent material-icons" data-id="1">'+
+                                    'edit'+
+                                '</button>'+
+                            '</div>'
                                     
     mas_opciones.appendChild(titulo)                        
     mas_opciones.appendChild(opciones)                        
@@ -83,10 +81,10 @@ contenido.addEventListener('scroll', () => {
 
 document.addEventListener('click', (evt) => {
     if (evt.target.dataset.opciones) {
-        render_mas_opciones(evt.target)
+        render_mas_opciones(evt.target.textContent)
     } else if (evt.target.dataset.quitar) {
-        quitar_mas_opciones()
+        quitar_mas_opciones(evt.target)
     } else if (evt.target.dataset.menu) {
         abrir_cerrar_menu()
     }
-})
+});

@@ -1038,13 +1038,46 @@ body {
         transition: all .3s;
     }
 
+    .mas_opciones {
+        width: 80%;
+        height: 0px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .w-80 {
+        width: 100%;
+        left: 0px;
+    }
+    
+    .w-100 {
+        width: 100%;
+        left: 0px;
+    }
+
+    .mas_opciones.mostrar {
+        height: 80px;
+    }
+
+    .mas_opciones .titulo h3 {
+        font-size: 1rem;
+    }
+
+    .mas_opciones .titulo i {
+        padding-right: 15px;
+        font-size: 1.5rem;
+    }
+
     .contenido .informacion {
-        min-width: 500px;
+        min-width: 250px;
         padding: 15px;
     }
 
     .contenido header {
-        min-width: 500px;
+        min-width: 250px;
         padding: 15px;
     }
 
