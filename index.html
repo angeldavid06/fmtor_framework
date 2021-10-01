@@ -11,10 +11,10 @@
 </head>
 <body>
     <div class="contenedor">
-        <button class="btn btn-icon btn-flotante" id="btn-subir">
+        <a href="#top" class="btn btn-icon btn-flotante" id="btn-subir">
             <i class="material-icons">expand_less</i> 
             Subir
-        </button>
+        </a>
         <div class="menu" id="menu">
             <div class="informacion">
                 <div class="foto">
@@ -63,9 +63,9 @@
             </div>
         </div>
         <div class="contenido" id="contenido">
-            <header>
+            <header id="top">
                 <div class="opciones">
-                    <button class="btn material-icons" id="btn-menu-toggle">menu</button>
+                    <button class="btn btn-icon-self material-icons" id="btn-menu-toggle" data-menu="btn-menu-toggle">menu</button>
                 </div>
                 <div class="logos">
                     <div class="logo">
@@ -90,12 +90,8 @@
                     </div>
                 </div>
             </header>
-            <div class="informacion d-grid">
-                <h1>Control de producción</h1>
-                <div class="tarjeta">
-                    <h3>Breve descripción</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, porro assumenda veritatis alias nam voluptatibus officiis fugiat consequuntur amet. Ex veritatis incidunt aspernatur recusandae nisi dolorum unde deleniti sit nihil.</p>
-                </div>
+            <div class="informacion">
+                <h1>Título de la página</h1>
                 <div class="tarjeta">
                     <table>
                         <thead>
@@ -110,60 +106,125 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
+                                <td><button class="btn btn-icon-self material-icons">delete</button></td>
+                                <td><button class="btn btn-icon-self material-icons">edit</button></td>
                                 <td>td-3</td>
                                 <td>td-4</td>
                                 <td>td-5</td>
                                 <td>td-6</td>
                             </tr>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
+                                <td><button class="btn btn-icon-self material-icons">delete</button></td>
+                                <td><button class="btn btn-icon-self material-icons">edit</button></td>
                                 <td>td-3</td>
                                 <td>td-4</td>
                                 <td>td-5</td>
                                 <td>td-6</td>
                             </tr>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
+                                <td><button class="btn btn-icon-self material-icons">delete</button></td>
+                                <td><button class="btn btn-icon-self material-icons">edit</button></td>
                                 <td>td-3</td>
                                 <td>td-4</td>
                                 <td>td-5</td>
                                 <td>td-6</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h1>Barra de opciones</h1>
+                <div class="tarjeta">
+                    <table>
+                        <thead>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
-                                <td>td-3</td>
-                                <td>td-4</td>
-                                <td>td-5</td>
-                                <td>td-6</td>
+                                <th>th-1</th>
+                                <th>th-2</th>
+                                <th>th-3</th>
+                                <th>th-4</th>
+                                <th>th-5</th>
+                                <th>th-6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-opciones="1">td-1</td>
+                                <td data-opciones="1">td-2</td>
+                                <td data-opciones="1">td-3</td>
+                                <td data-opciones="1">td-4</td>
+                                <td data-opciones="1">td-5</td>
+                                <td data-opciones="1">td-6</td>
                             </tr>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
-                                <td>td-3</td>
-                                <td>td-4</td>
-                                <td>td-5</td>
-                                <td>td-6</td>
+                                <td data-opciones="2">td-1</td>
+                                <td data-opciones="2">td-2</td>
+                                <td data-opciones="2">td-3</td>
+                                <td data-opciones="2">td-4</td>
+                                <td data-opciones="2">td-5</td>
+                                <td data-opciones="2">td-6</td>
                             </tr>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
-                                <td>td-3</td>
-                                <td>td-4</td>
-                                <td>td-5</td>
-                                <td>td-6</td>
+                                <td data-opciones="1">td-1</td>
+                                <td data-opciones="1">td-2</td>
+                                <td data-opciones="1">td-3</td>
+                                <td data-opciones="1">td-4</td>
+                                <td data-opciones="1">td-5</td>
+                                <td data-opciones="1">td-6</td>
                             </tr>
                             <tr>
-                                <td><button class="btn material-icons">add</button></td>
-                                <td>td-2</td>
-                                <td>td-3</td>
-                                <td>td-4</td>
-                                <td>td-5</td>
-                                <td>td-6</td>
+                                <td data-opciones="2">td-1</td>
+                                <td data-opciones="2">td-2</td>
+                                <td data-opciones="2">td-3</td>
+                                <td data-opciones="2">td-4</td>
+                                <td data-opciones="2">td-5</td>
+                                <td data-opciones="2">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="1">td-1</td>
+                                <td data-opciones="1">td-2</td>
+                                <td data-opciones="1">td-3</td>
+                                <td data-opciones="1">td-4</td>
+                                <td data-opciones="1">td-5</td>
+                                <td data-opciones="1">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="2">td-1</td>
+                                <td data-opciones="2">td-2</td>
+                                <td data-opciones="2">td-3</td>
+                                <td data-opciones="2">td-4</td>
+                                <td data-opciones="2">td-5</td>
+                                <td data-opciones="2">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="1">td-1</td>
+                                <td data-opciones="1">td-2</td>
+                                <td data-opciones="1">td-3</td>
+                                <td data-opciones="1">td-4</td>
+                                <td data-opciones="1">td-5</td>
+                                <td data-opciones="1">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="2">td-1</td>
+                                <td data-opciones="2">td-2</td>
+                                <td data-opciones="2">td-3</td>
+                                <td data-opciones="2">td-4</td>
+                                <td data-opciones="2">td-5</td>
+                                <td data-opciones="2">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="1">td-1</td>
+                                <td data-opciones="1">td-2</td>
+                                <td data-opciones="1">td-3</td>
+                                <td data-opciones="1">td-4</td>
+                                <td data-opciones="1">td-5</td>
+                                <td data-opciones="1">td-6</td>
+                            </tr>
+                            <tr>
+                                <td data-opciones="2">td-1</td>
+                                <td data-opciones="2">td-2</td>
+                                <td data-opciones="2">td-3</td>
+                                <td data-opciones="2">td-4</td>
+                                <td data-opciones="2">td-5</td>
+                                <td data-opciones="2">td-6</td>
                             </tr>
                         </tbody>
                     </table>
